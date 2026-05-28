@@ -1,0 +1,7 @@
+node_modules/
+temporary screenshots/
+.DS_Store
+.vercel
+brand_assets/Screenshot*
+CLAUDE.md*
+*.jsonl
