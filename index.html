@@ -785,12 +785,14 @@
       .section-senses      { padding: 5rem 1.25rem 3rem; }
       .section-science     { padding: 5rem 1.25rem; }
       .section-order       { padding: 5rem 1.25rem; }
-      /* Feature blocks */
+      /* Feature blocks: tall enough to show full lg can (436px) */
       .fb-text, .fb-text-right { padding: 3rem 1.5rem; }
-      .fb-visual { min-height: 260px; }
-      /* Stat highlight */
-      .stat-hl-photo { height: 220px; }
+      .fb-visual { min-height: 480px; }
+      /* Stat highlight: tall enough for lg can */
+      .stat-hl-photo { height: 480px; }
       .stat-hl-text  { padding: 2.5rem 1.5rem; }
+      /* Flavor cells: portrait so md can (300px) is fully visible */
+      .flavor-cell { aspect-ratio: 1/2; }
       /* Senses */
       .senses-inner-bg { gap: 1.5rem; padding: 3rem 1.25rem; }
       /* Grids → single column */
@@ -813,6 +815,18 @@
       .senses-inner-bg > div:nth-child(1),
       .senses-inner-bg > div:nth-child(4) { display: none; }
       .senses-inner-bg { gap: 2rem; padding: 3rem 1.5rem; }
+      /* Hero can: scale xl (574px tall) down so full can fits in viewport */
+      .hero-can-wrap canvas {
+        transform: scale(0.72);
+        transform-origin: top center;
+        margin-bottom: -161px; /* 574 × (1 − 0.72) = 161 — closes layout gap */
+      }
+      /* Design section can: scale lg (436px) to fit without heavy scrolling */
+      .design-can-wrap {
+        transform: scale(0.80);
+        transform-origin: top center;
+        margin-bottom: -87px; /* 436 × (1 − 0.80) = 87 */
+      }
     }
 
     /* ── Extra small (≤ 480px) ── */
