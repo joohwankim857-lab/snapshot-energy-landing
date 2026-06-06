@@ -6,7 +6,7 @@
   <title>Snapshot Energy — Hello, Energy.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Bebas+Neue&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -150,7 +150,7 @@
       background: #fff;
       text-align: center;
       padding: 4rem 2rem 0;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
     .hero-eyebrow {
@@ -227,148 +227,8 @@
       to   { opacity: 1; transform: scale(1) translateY(0); }
     }
 
-    /* ══════════════════════════════════════════
-       CSS ENERGY DRINK CAN  (reusable)
-    ══════════════════════════════════════════ */
-    .can {
-      position: relative;
-      display: inline-block;
-    }
-    .can-top {
-      width: 74%;
-      aspect-ratio: 2.4/1;
-      margin: 0 auto;
-      border-radius: 50%;
-      position: relative;
-      z-index: 3;
-    }
-    .can-top-chrome {
-      background: linear-gradient(162deg, #e8f0f8 0%, #b8c8dc 45%, #7890b0 100%);
-      box-shadow: inset 0 -4px 8px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.3);
-    }
-    /* pull tab */
-    .can-top::after {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: 56%;
-      width: 14%;
-      height: 55%;
-      background: linear-gradient(to bottom, #ccd8e8, #8898b8);
-      border-radius: 4px 4px 8px 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
-    }
-    .can-top::before {
-      content: '';
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 28%;
-      height: 50%;
-      background: linear-gradient(to bottom, #d8e4f0, #a8b8cc);
-      border-radius: 50%;
-    }
-    .can-body {
-      position: relative;
-      border-radius: 4px 4px 10px 10px;
-      overflow: hidden;
-      margin-top: -5%;
-      box-shadow:
-        inset -10% 0 18% rgba(0,0,0,0.5),
-        inset 4% 0 14% rgba(255,255,255,0.06),
-        2px 0 16px rgba(0,0,0,0.3);
-    }
-    /* highlight streaks */
-    .can-body::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      left: 9%;
-      width: 8%;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.46), transparent);
-      z-index: 2;
-      pointer-events: none;
-    }
-    .can-body::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      left: 20%;
-      width: 3.5%;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.14), transparent);
-      z-index: 2;
-      pointer-events: none;
-    }
-    .can-label {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 3;
-    }
-    .can-label-brand {
-      font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: rgba(255,255,255,0.95);
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-      line-height: 1;
-    }
-    .can-label-sub {
-      font-weight: 500;
-      color: rgba(255,255,255,0.6);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .can-bottom-chrome {
-      background: linear-gradient(to top, #e8f0f8 0%, #b8c8dc 55%, #7890b0 100%);
-      box-shadow: inset 0 4px 8px rgba(0,0,0,0.25), 0 6px 16px rgba(0,0,0,0.5);
-    }
-    .can-bottom {
-      width: 74%;
-      aspect-ratio: 2.4/1;
-      margin: -4% auto 0;
-      border-radius: 50%;
-      z-index: 3;
-      position: relative;
-    }
-
-    /* Flavor gradient presets */
-    .can-arctic  { background: linear-gradient(158deg, #beeeff 0%, #64c8ff 15%, #2158E8 40%, #0f2888 65%, #1a1a55 100%); }
-    .can-grape   { background: linear-gradient(158deg, #ddbbff 0%, #a855f7 15%, #8030CC 40%, #4a0888 65%, #1a0035 100%); }
-    .can-citrus  { background: linear-gradient(158deg, #fff0a0 0%, #ffd040 15%, #ff8800 40%, #c84800 65%, #500800 100%); }
-    .can-midnight{ background: linear-gradient(158deg, #88ffcc 0%, #20c8a0 15%, #0088a8 40%, #004068 65%, #001020 100%); }
-    .can-default { background: linear-gradient(158deg, #beeeff 0%, #64c8ff 12%, #2158E8 35%, #8030CC 65%, #100820 100%); }
-
-    /* Can size variants */
-    .can-xl .can-body { width: 210px; height: 460px; }
-    .can-xl .can-top, .can-xl .can-bottom { width: 155px; }
-    .can-xl .can-label-brand { font-size: 2.1rem; }
-    .can-xl .can-label-sub { font-size: 0.38rem; margin-top: 0.2rem; }
-
-    .can-lg .can-body { width: 160px; height: 350px; }
-    .can-lg .can-top, .can-lg .can-bottom { width: 118px; }
-    .can-lg .can-label-brand { font-size: 1.65rem; }
-    .can-lg .can-label-sub { font-size: 0.3rem; margin-top: 0.15rem; }
-
-    .can-md .can-body { width: 110px; height: 240px; }
-    .can-md .can-top, .can-md .can-bottom { width: 81px; }
-    .can-md .can-label-brand { font-size: 1.1rem; }
-    .can-md .can-label-sub { font-size: 0.22rem; margin-top: 0.1rem; }
-
-    .can-sm .can-body { width: 70px; height: 155px; }
-    .can-sm .can-top, .can-sm .can-bottom { width: 52px; }
-    .can-sm .can-label-brand { font-size: 0.75rem; }
-    .can-sm .can-label-sub { font-size: 0.16rem; margin-top: 0.08rem; }
-
-    /* Drop shadow presets */
-    .can-shadow-blue  { filter: drop-shadow(0 40px 80px rgba(33,88,232,0.35))  drop-shadow(0 16px 30px rgba(0,0,0,0.18)); }
-    .can-shadow-grape { filter: drop-shadow(0 40px 80px rgba(128,48,204,0.35)) drop-shadow(0 16px 30px rgba(0,0,0,0.18)); }
-    .can-shadow-citrus{ filter: drop-shadow(0 40px 80px rgba(255,140,0,0.3))   drop-shadow(0 16px 30px rgba(0,0,0,0.18)); }
-    .can-shadow-teal  { filter: drop-shadow(0 40px 80px rgba(0,136,168,0.3))   drop-shadow(0 16px 30px rgba(0,0,0,0.18)); }
+    /* Three.js GL cans — replaces CSS can system */
+    .gl-can { display: block; }
 
     /* ══════════════════════════════════════════
        SECTION TYPOGRAPHY SYSTEM
@@ -862,27 +722,107 @@
     }
 
     /* ══════════════════════════════════════════
-       RESPONSIVE
+       RESPONSIVE SYSTEM
     ══════════════════════════════════════════ */
-    @media (max-width: 900px) {
-      .gnav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+
+    /* ── Large monitor (≥ 1440px): wider containers, more breathing room ── */
+    @media (min-width: 1440px) {
+      .gnav-inner,
+      .lnav-inner { max-width: 1280px; }
+      .section-flavors .inner,
+      .science-inner,
+      .order-inner { max-width: 1200px; }
+      .section-flavors     { padding: 8rem 3rem; }
+      .section-design      { padding: 10rem 3rem 8rem; }
+      .section-performance { padding: 10rem 3rem 5rem; }
+      .section-senses      { padding: 10rem 3rem 7rem; }
+      .section-science     { padding: 9rem 3rem; }
+      .section-order       { padding: 9rem 3rem; }
+      .fb-text             { padding: 6rem 5rem 6rem 6.5rem; }
+      .fb-text-right       { padding: 6rem 6.5rem 6rem 5rem; }
+      .stat-hl-text        { padding: 5rem 5rem 5rem 6rem; }
+      .senses-visual       { max-width: 1100px; }
+      .perf-product-wrap   { max-width: 960px; }
+    }
+
+    /* ── Tablet (≤ 1023px): hide text nav links, keep only icons ── */
+    @media (max-width: 1023px) {
+      .gnav-links li:not(.nav-icon) { display: none; }
       .lnav-links { display: none; }
-      .feature-block { grid-template-columns: 1fr; }
-      .fb-text, .fb-text-right { padding: 4rem 2rem; }
-      .fb-text .s-body { max-width: 100%; }
-      .fb-visual { min-height: 340px; }
+    }
+
+    /* ── Small tablet (≤ 900px): stack feature blocks, 2-col grids ── */
+    @media (max-width: 900px) {
+      /* Feature blocks: flex-column so text always precedes visual */
+      .feature-block { display: flex; flex-direction: column; }
+      .fb-text, .fb-text-right { order: 0; padding: 3.5rem 2.5rem; }
+      .fb-visual               { order: 1; min-height: 300px; }
+      .fb-text .s-body         { max-width: 100%; }
+      /* 3-col → 2-col */
       .science-grid { grid-template-columns: 1fr 1fr; }
-      .order-grid { grid-template-columns: 1fr 1fr; }
+      .order-grid   { grid-template-columns: 1fr 1fr; }
+      /* Stat highlight: stack */
       .section-stat-hl { grid-template-columns: 1fr; }
       .stat-hl-photo { height: 260px; }
-      .stat-hl-text { padding: 3rem 2rem; }
+      .stat-hl-text  { padding: 3rem 2rem; }
+      /* Footer */
       .footer-links-row { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ── Mobile (≤ 767px) ── */
+    @media (max-width: 767px) {
+      /* Compact local nav */
+      .lnav { height: 44px; }
+      .lnav-name { font-size: 0.82rem; }
+      .lnav-buy  { font-size: 0.72rem; padding: 0.35rem 0.9rem; }
+      /* Hero */
+      .hero { padding: 2.5rem 1.5rem 0; }
+      .hero-price { margin-bottom: 2.5rem; }
+      /* Section padding */
+      .section-flavors     { padding: 4rem 1.25rem; }
+      .section-design      { padding: 5rem 1.5rem 4rem; }
+      .section-performance { padding: 5rem 1.5rem 3rem; }
+      .section-senses      { padding: 5rem 1.25rem 3rem; }
+      .section-science     { padding: 5rem 1.25rem; }
+      .section-order       { padding: 5rem 1.25rem; }
+      /* Feature blocks */
+      .fb-text, .fb-text-right { padding: 3rem 1.5rem; }
+      .fb-visual { min-height: 260px; }
+      /* Stat highlight */
+      .stat-hl-photo { height: 220px; }
+      .stat-hl-text  { padding: 2.5rem 1.5rem; }
+      /* Senses */
+      .senses-inner-bg { gap: 1.5rem; padding: 3rem 1.25rem; }
+      /* Grids → single column */
+      .science-grid { grid-template-columns: 1fr; }
+      .order-grid   { grid-template-columns: 1fr; }
+      /* Performance cans: tighter gap so they fit */
+      #perf-wrap > div { gap: 1.5rem; padding: 1.5rem 0 0; }
+      /* Footer */
+      footer { padding: 2rem 1.5rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── Small mobile (≤ 600px): strip back multi-can layouts ── */
     @media (max-width: 600px) {
       .flavor-grid { grid-template-columns: 1fr 1fr; }
-      .science-grid { grid-template-columns: 1fr; }
-      .order-grid { grid-template-columns: 1fr; }
-      .senses-inner-bg { gap: 2rem; }
+      /* Performance: hide side cans, show only center hero can */
+      #perf-wrap .reveal-left,
+      #perf-wrap .reveal-right { display: none; }
+      /* Senses: hide outer two smallest cans, keep center two large */
+      .senses-inner-bg > div:nth-child(1),
+      .senses-inner-bg > div:nth-child(4) { display: none; }
+      .senses-inner-bg { gap: 2rem; padding: 3rem 1.5rem; }
+    }
+
+    /* ── Extra small (≤ 480px) ── */
+    @media (max-width: 480px) {
+      .section-flavors  { padding: 3.5rem 1rem; }
+      .section-science  { padding: 4rem 1rem; }
+      .section-order    { padding: 4rem 1rem; }
+      .section-senses   { padding: 4rem 1rem 2.5rem; }
+      .fb-text, .fb-text-right { padding: 2.5rem 1.25rem; }
+      .stat-hl-text     { padding: 2rem 1.25rem; }
       .footer-links-row { grid-template-columns: 1fr 1fr; }
     }
 
@@ -891,6 +831,14 @@
       to   { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -940,16 +888,7 @@
     <div class="hero-can-wrap" id="hero-can-parallax">
       <!-- Large hero can, slightly tilted -->
       <div style="transform: rotate(-6deg); display: inline-block;">
-        <div class="can can-xl can-shadow-blue">
-          <div class="can-top can-top-chrome"></div>
-          <div class="can-body can-default">
-            <div class="can-label">
-              <div class="can-label-brand">SNAP<br>SHOT</div>
-              <div class="can-label-sub">Energy Drink</div>
-            </div>
-          </div>
-          <div class="can-bottom can-bottom-chrome"></div>
-        </div>
+        <canvas class="gl-can" data-flavor="default" data-size="xl"></canvas>
       </div>
     </div>
   </section>
@@ -966,64 +905,28 @@
       <div class="flavor-grid reveal-scale d1">
         <div class="flavor-cell fc-arctic">
           <div class="flavor-cell-can">
-            <div class="can can-md can-shadow-blue" style="filter:drop-shadow(0 20px 40px rgba(33,88,232,0.35))">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-arctic">
-                <div class="can-label">
-                  <div class="can-label-brand">SNAP<br>SHOT</div>
-                  <div class="can-label-sub">Arctic Flash</div>
-                </div>
-              </div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="arctic" data-size="md"></canvas>
           </div>
           <div class="flavor-cell-name">Arctic Flash</div>
         </div>
 
         <div class="flavor-cell fc-grape">
           <div class="flavor-cell-can">
-            <div class="can can-md can-shadow-grape">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-grape">
-                <div class="can-label">
-                  <div class="can-label-brand">SNAP<br>SHOT</div>
-                  <div class="can-label-sub">Grape Exposure</div>
-                </div>
-              </div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="grape" data-size="md"></canvas>
           </div>
           <div class="flavor-cell-name">Grape Exposure</div>
         </div>
 
         <div class="flavor-cell fc-citrus">
           <div class="flavor-cell-can">
-            <div class="can can-md can-shadow-citrus">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-citrus">
-                <div class="can-label">
-                  <div class="can-label-brand">SNAP<br>SHOT</div>
-                  <div class="can-label-sub">Citrus Develop</div>
-                </div>
-              </div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="citrus" data-size="md"></canvas>
           </div>
           <div class="flavor-cell-name">Citrus Develop</div>
         </div>
 
         <div class="flavor-cell fc-midnight">
           <div class="flavor-cell-can">
-            <div class="can can-md can-shadow-teal">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-midnight">
-                <div class="can-label">
-                  <div class="can-label-brand">SNAP<br>SHOT</div>
-                  <div class="can-label-sub">Midnight Shot</div>
-                </div>
-              </div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="midnight" data-size="md"></canvas>
           </div>
           <div class="flavor-cell-name">Midnight Shot</div>
         </div>
@@ -1041,16 +944,7 @@
       <h2 class="s-headline s-headline-xl s-headline-white reveal" style="max-width:660px;margin:0.5rem auto 0;">Thin. Bold.<br>Unapologetically vibrant.</h2>
       <p class="s-body s-body-white reveal d1" style="max-width:500px;margin:1rem auto 0;">12oz of pure, clean energy in a can so good-looking you'll want to keep it.</p>
       <div class="design-can-wrap reveal-scale d2">
-        <div class="can can-lg" style="filter:drop-shadow(0 50px 100px rgba(33,88,232,0.6)) drop-shadow(0 0 30px rgba(125,212,247,0.3));">
-          <div class="can-top can-top-chrome"></div>
-          <div class="can-body can-default">
-            <div class="can-label">
-              <div class="can-label-brand">SNAP<br>SHOT</div>
-              <div class="can-label-sub">Energy Drink</div>
-            </div>
-          </div>
-          <div class="can-bottom can-bottom-chrome"></div>
-        </div>
+        <canvas class="gl-can" data-flavor="default" data-size="lg" style="filter:drop-shadow(0 50px 100px rgba(33,88,232,0.7)) drop-shadow(0 0 40px rgba(125,212,247,0.4));"></canvas>
       </div>
     </div>
   </section>
@@ -1064,25 +958,13 @@
       <div style="display:flex;align-items:flex-end;justify-content:center;gap:3rem;flex-wrap:wrap;padding:2rem 0 0;">
         <!-- Three cans at angles -->
         <div style="transform:rotate(-12deg) translateY(20px);" class="reveal-left">
-          <div class="can can-lg can-shadow-grape">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-grape"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Grape Exposure</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="grape" data-size="lg"></canvas>
         </div>
         <div style="transform:rotate(-3deg);" class="reveal">
-          <div class="can can-xl can-shadow-blue">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-arctic"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Arctic Flash</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="arctic" data-size="xl"></canvas>
         </div>
         <div style="transform:rotate(10deg) translateY(20px);" class="reveal-right">
-          <div class="can can-lg can-shadow-citrus">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-citrus"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Citrus Develop</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="citrus" data-size="lg"></canvas>
         </div>
       </div>
     </div>
@@ -1099,11 +981,7 @@
     </div>
     <div class="fb-visual fb-bg-blue reveal-right">
       <div class="fb-can-float">
-        <div class="can can-lg can-shadow-blue">
-          <div class="can-top can-top-chrome"></div>
-          <div class="can-body can-arctic"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Arctic Flash</div></div></div>
-          <div class="can-bottom can-bottom-chrome"></div>
-        </div>
+        <canvas class="gl-can" data-flavor="arctic" data-size="lg"></canvas>
       </div>
     </div>
   </section>
@@ -1114,11 +992,7 @@
   <section class="feature-block" id="crash" style="background:var(--bg-alt);">
     <div class="fb-visual fb-bg-purple reveal-left">
       <div class="fb-can-float" style="animation-delay:-2.5s;">
-        <div class="can can-lg can-shadow-grape">
-          <div class="can-top can-top-chrome"></div>
-          <div class="can-body can-grape"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Grape Exposure</div></div></div>
-          <div class="can-bottom can-bottom-chrome"></div>
-        </div>
+        <canvas class="gl-can" data-flavor="grape" data-size="lg"></canvas>
       </div>
     </div>
     <div class="fb-text fb-text-right reveal-right">
@@ -1147,11 +1021,7 @@
     </div>
     <div class="fb-visual fb-bg-green reveal-right">
       <div class="fb-can-float" style="animation-delay:-1.5s;">
-        <div class="can can-lg can-shadow-teal">
-          <div class="can-top can-top-chrome"></div>
-          <div class="can-body can-midnight"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Midnight Shot</div></div></div>
-          <div class="can-bottom can-bottom-chrome"></div>
-        </div>
+        <canvas class="gl-can" data-flavor="midnight" data-size="lg"></canvas>
       </div>
     </div>
   </section>
@@ -1164,11 +1034,7 @@
       <div class="stat-hl-photo-inner">
         <!-- CSS lifestyle visual: person + can -->
         <div style="text-align:center;">
-          <div class="can can-lg can-shadow-blue" style="display:inline-block;transform:rotate(10deg);">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-citrus"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Citrus Develop</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="citrus" data-size="lg" style="transform:rotate(10deg);"></canvas>
         </div>
       </div>
     </div>
@@ -1190,32 +1056,16 @@
       <div class="senses-inner-bg">
         <!-- All 4 cans in a dramatic dark arrangement -->
         <div style="transform:rotate(-8deg) translateY(10px);">
-          <div class="can can-md" style="filter:drop-shadow(0 20px 50px rgba(33,88,232,0.5));">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-arctic"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Arctic Flash</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="arctic" data-size="md" style="filter:drop-shadow(0 20px 50px rgba(33,88,232,0.6));"></canvas>
         </div>
         <div style="transform:rotate(-3deg);">
-          <div class="can can-lg" style="filter:drop-shadow(0 30px 70px rgba(128,48,204,0.55));">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-grape"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Grape Exposure</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="grape" data-size="lg" style="filter:drop-shadow(0 30px 70px rgba(128,48,204,0.6));"></canvas>
         </div>
         <div style="transform:rotate(4deg);">
-          <div class="can can-lg" style="filter:drop-shadow(0 30px 70px rgba(255,140,0,0.5));">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-citrus"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Citrus Develop</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="citrus" data-size="lg" style="filter:drop-shadow(0 30px 70px rgba(255,140,0,0.55));"></canvas>
         </div>
         <div style="transform:rotate(9deg) translateY(10px);">
-          <div class="can can-md" style="filter:drop-shadow(0 20px 50px rgba(0,136,168,0.5));">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-midnight"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Midnight Shot</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="midnight" data-size="md" style="filter:drop-shadow(0 20px 50px rgba(0,136,168,0.6));"></canvas>
         </div>
       </div>
     </div>
@@ -1277,11 +1127,7 @@
       <div class="order-grid">
         <div class="order-card reveal d1">
           <div class="order-card-can">
-            <div class="can can-md can-shadow-blue">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-arctic"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Arctic Flash</div></div></div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="arctic" data-size="md"></canvas>
           </div>
           <div class="order-card-name">Arctic Flash</div>
           <div class="order-card-desc">Icy Berry Frost — crisp, cold, electric.</div>
@@ -1290,11 +1136,7 @@
         </div>
         <div class="order-card reveal d2">
           <div class="order-card-can">
-            <div class="can can-md can-shadow-grape">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-grape"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Grape Exposure</div></div></div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="grape" data-size="md"></canvas>
           </div>
           <div class="order-card-name">Grape Exposure</div>
           <div class="order-card-desc">Deep Grape Rush — bold, smooth, addictive.</div>
@@ -1303,11 +1145,7 @@
         </div>
         <div class="order-card reveal d3">
           <div class="order-card-can">
-            <div class="can can-md can-shadow-citrus">
-              <div class="can-top can-top-chrome"></div>
-              <div class="can-body can-citrus"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div><div class="can-label-sub">Citrus Develop</div></div></div>
-              <div class="can-bottom can-bottom-chrome"></div>
-            </div>
+            <canvas class="gl-can" data-flavor="citrus" data-size="md"></canvas>
           </div>
           <div class="order-card-name">Citrus Develop</div>
           <div class="order-card-desc">Tropical Citrus Surge — bright, punchy, loud.</div>
@@ -1323,11 +1161,7 @@
           <div style="font-size:0.88rem;color:var(--text-2);margin-top:0.25rem;">3 cans of each flavor — $29.99 / <a href="#" style="color:var(--blue);text-decoration:none;">$2.49/mo. for 12 mo.</a><sup>†</sup></div>
         </div>
         <div style="display:flex;align-items:center;gap:1rem;">
-          <div class="can can-sm can-shadow-blue" style="transform:rotate(-5deg);">
-            <div class="can-top can-top-chrome"></div>
-            <div class="can-body can-arctic"><div class="can-label"><div class="can-label-brand">SNAP<br>SHOT</div></div></div>
-            <div class="can-bottom can-bottom-chrome"></div>
-          </div>
+          <canvas class="gl-can" data-flavor="arctic" data-size="sm" style="transform:rotate(-5deg);"></canvas>
           <a class="pill-btn" href="#" style="font-size:0.95rem;padding:0.7rem 2rem;">Buy</a>
           <a href="#" style="color:var(--blue);font-size:0.88rem;font-weight:500;text-decoration:none;">Learn more ›</a>
         </div>
@@ -1465,6 +1299,326 @@
       const mid = rect.top + rect.height / 2 - window.innerHeight / 2;
       perfWrap.style.transform = `translateY(${Math.max(-40, Math.min(40, mid * 0.08))}px)`;
     }, { passive: true });
+  </script>
+
+  <!-- Three.js WebGL Can Renderer -->
+  <script type="module">
+  import * as THREE from 'three';
+
+  // ── Config ────────────────────────────────────────────────────────────
+  const FLAVORS = {
+    default:  { stops: ['#100820','#6020b8','#2158E8','#3898f8','#64c8ff'], name: 'ENERGY DRINK',    subname: 'Original Blend' },
+    arctic:   { stops: ['#040d3a','#0a3898','#1a78e8','#3aadff','#7dd4f7'], name: 'ARCTIC FLASH',    subname: 'Icy Berry Frost' },
+    grape:    { stops: ['#180030','#420880','#7020c0','#9040e8','#c890ff'], name: 'GRAPE EXPOSURE',  subname: 'Deep Grape Rush' },
+    citrus:   { stops: ['#400800','#c83800','#ff7000','#ffb820','#ffe860'], name: 'CITRUS DEVELOP',  subname: 'Tropical Citrus Surge' },
+    midnight: { stops: ['#001828','#005070','#0090b0','#10d8a8','#40ffcc'], name: 'MIDNIGHT SHOT',   subname: 'Cool Teal Energy' },
+  };
+
+  const SIZES = {
+    xl: { w: 234, h: 574 },
+    lg: { w: 178, h: 436 },
+    md: { w: 122, h: 300 },
+    sm: { w:  78, h: 190 },
+  };
+
+  const DPR = Math.min(window.devicePixelRatio, 2);
+
+  // ── Shared renderer ───────────────────────────────────────────────────
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(DPR);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.72;
+
+  // ── Label texture ─────────────────────────────────────────────────────
+  const labelCache = {};
+  function makeLabelTexture(flavorKey) {
+    if (labelCache[flavorKey]) return labelCache[flavorKey];
+    const f = FLAVORS[flavorKey] || FLAVORS.default;
+    const W = 2048, H = 1024;
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const ctx = c.getContext('2d');
+
+    // Base gradient (vertical)
+    const bg = ctx.createLinearGradient(0, 0, 0, H);
+    f.stops.forEach((col, i) => bg.addColorStop(i / (f.stops.length - 1), col));
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // Edge darkening (cylindrical shading baked into texture for extra depth)
+    const edge = ctx.createLinearGradient(0, 0, W, 0);
+    edge.addColorStop(0,    'rgba(0,0,0,0.42)');
+    edge.addColorStop(0.06, 'rgba(0,0,0,0.12)');
+    edge.addColorStop(0.14, 'rgba(0,0,0,0)');
+    edge.addColorStop(0.86, 'rgba(0,0,0,0)');
+    edge.addColorStop(0.94, 'rgba(0,0,0,0.18)');
+    edge.addColorStop(1.0,  'rgba(0,0,0,0.46)');
+    ctx.fillStyle = edge;
+    ctx.fillRect(0, 0, W, H);
+
+    // Primary specular streak (narrow bright band at ~45% from left = front-facing)
+    const spec = ctx.createLinearGradient(0, 0, W, 0);
+    spec.addColorStop(0.38, 'rgba(255,255,255,0)');
+    spec.addColorStop(0.44, 'rgba(255,255,255,0.06)');
+    spec.addColorStop(0.462,'rgba(255,255,255,0.32)');
+    spec.addColorStop(0.48, 'rgba(255,255,255,0.06)');
+    spec.addColorStop(0.54, 'rgba(255,255,255,0)');
+    ctx.fillStyle = spec;
+    ctx.fillRect(0, 0, W, H);
+
+    // Secondary reflection
+    const ref2 = ctx.createLinearGradient(0, 0, W, 0);
+    ref2.addColorStop(0.60, 'rgba(255,255,255,0)');
+    ref2.addColorStop(0.635,'rgba(255,255,255,0.05)');
+    ref2.addColorStop(0.65, 'rgba(255,255,255,0)');
+    ctx.fillStyle = ref2;
+    ctx.fillRect(0, 0, W, H);
+
+    // Bottom fade to aluminum (bottom shoulder transition)
+    const botFade = ctx.createLinearGradient(0, H * 0.88, 0, H);
+    botFade.addColorStop(0, 'rgba(180,200,220,0)');
+    botFade.addColorStop(1, 'rgba(180,200,220,0.35)');
+    ctx.fillStyle = botFade;
+    ctx.fillRect(0, H * 0.88, W, H * 0.12);
+
+    // ── Brand text ──────────────────────────────────────────────────
+    // The visible front face of the cylinder spans U=0.25→0.75 = 50% of texture width.
+    // Text must be narrow enough to read on that face without wrapping around sides.
+    // Two-line SNAP/SHOT approach: each 4-char word fits cleanly.
+    const cx = W * 0.50;
+    const brandSize = Math.round(H * 0.195); // ~200px — fits 4 chars in visible face
+    const lineSpacing = brandSize * 1.08;
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    ctx.font = `normal ${brandSize}px "Bebas Neue", Impact, sans-serif`;
+
+    // Text shadow / glow for depth
+    ctx.shadowColor = 'rgba(0,0,0,0.75)';
+    ctx.shadowBlur = 36;
+    ctx.shadowOffsetY = 6;
+    ctx.fillStyle = 'rgba(255,255,255,0.97)';
+    ctx.fillText('SNAP', cx, H * 0.34);
+    ctx.fillText('SHOT', cx, H * 0.34 + lineSpacing);
+    ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+
+    // Thin accent rule
+    ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+    ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(W*0.32, H*0.60); ctx.lineTo(W*0.68, H*0.60); ctx.stroke();
+
+    // Flavor name
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.font = `normal ${Math.round(H * 0.082)}px "Bebas Neue", Arial Black, sans-serif`;
+    ctx.fillText(f.name, cx, H * 0.67);
+
+    // Sub-flavor descriptor
+    ctx.fillStyle = 'rgba(255,255,255,0.50)';
+    ctx.font = `600 ${Math.round(H * 0.046)}px "Plus Jakarta Sans", Arial, sans-serif`;
+    ctx.fillText(f.subname, cx, H * 0.748);
+
+    // Bottom info
+    ctx.fillStyle = 'rgba(255,255,255,0.28)';
+    ctx.font = `400 ${Math.round(H * 0.038)}px "Plus Jakarta Sans", Arial, sans-serif`;
+    ctx.fillText('12 FL OZ (355 mL)  ·  ENERGY DRINK', cx, H * 0.90);
+
+    const tex = new THREE.CanvasTexture(c);
+    tex.colorSpace = THREE.SRGBColorSpace; // canvas 2D is sRGB; tell Three.js so it linearizes correctly before tonemapping
+    labelCache[flavorKey] = tex;
+    return tex;
+  }
+
+  // ── Can geometry builder ──────────────────────────────────────────────
+  function buildCan(flavorKey) {
+    const group = new THREE.Group();
+    const R = 0.50, BH = 2.0; // body radius, body height
+
+    // Aluminum material — Phong is GPU-independent, no envMap needed
+    const alu = () => new THREE.MeshPhongMaterial({
+      color: new THREE.Color(0.72, 0.80, 0.90),
+      specular: new THREE.Color(0.92, 0.94, 0.98),
+      shininess: 120,
+    });
+
+    // Label body
+    const bodyGeo = new THREE.CylinderGeometry(R, R, BH, 80, 1, false);
+    // MeshBasicMaterial for label = unlit, colors show exactly as designed
+    // Cylindrical edge-darkening is baked into the label texture itself
+    const bodyMat = new THREE.MeshBasicMaterial({
+      map: makeLabelTexture(flavorKey),
+    });
+    group.add(new THREE.Mesh(bodyGeo, bodyMat));
+
+    // Bottom shoulder + base (LatheGeometry profile)
+    const btPts = [
+      new THREE.Vector2(0.00, -(BH/2+0.270)),
+      new THREE.Vector2(0.28, -(BH/2+0.265)),
+      new THREE.Vector2(0.40, -(BH/2+0.200)),
+      new THREE.Vector2(0.47, -(BH/2+0.100)),
+      new THREE.Vector2(0.50, -(BH/2+0.010)),
+    ];
+    group.add(new THREE.Mesh(new THREE.LatheGeometry(btPts, 64), alu()));
+
+    // Top shoulder + neck
+    const tpPts = [
+      new THREE.Vector2(0.50, BH/2+0.010),
+      new THREE.Vector2(0.50, BH/2+0.080),
+      new THREE.Vector2(0.46, BH/2+0.170),
+      new THREE.Vector2(0.40, BH/2+0.265),
+      new THREE.Vector2(0.385,BH/2+0.350),
+      new THREE.Vector2(0.375,BH/2+0.400),
+      // bead (rolled metal edge)
+      new THREE.Vector2(0.385,BH/2+0.445),
+      new THREE.Vector2(0.400,BH/2+0.465),
+      new THREE.Vector2(0.385,BH/2+0.480),
+    ];
+    group.add(new THREE.Mesh(new THREE.LatheGeometry(tpPts, 64), alu()));
+
+    // Top lid circle
+    const lid = new THREE.Mesh(new THREE.CircleGeometry(0.37, 64), alu());
+    lid.rotation.x = -Math.PI/2;
+    lid.position.y = BH/2 + 0.472;
+    group.add(lid);
+
+    // Pull tab body
+    const tabMat = new THREE.MeshPhongMaterial({
+      color: new THREE.Color(0.82, 0.88, 0.96),
+      specular: new THREE.Color(0.96, 0.97, 1.0),
+      shininess: 160,
+    });
+    const tab = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.018, 0.22), tabMat);
+    tab.position.set(0.12, BH/2+0.480, 0.06);
+    tab.rotation.x = -0.18;
+    group.add(tab);
+
+    // Pull ring
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.050, 0.011, 8, 32), tabMat.clone());
+    ring.position.set(0.12, BH/2+0.478, 0.225);
+    ring.rotation.x = Math.PI/2 + 0.18;
+    group.add(ring);
+
+    // CylinderGeometry U=0 faces +Z (camera). Rotate 180° so the label
+    // centered at U=0.5 (cx=W/2 in the texture) faces the camera instead.
+    group.rotation.y = Math.PI;
+
+    return group;
+  }
+
+  // ── Camera (orthographic, product-photo look) ─────────────────────────
+  function makeCamera(w, h) {
+    const aspect = w / h;
+    // Tighter frustum — frames the can with minimal padding
+    const fH = 2.90;
+    const cam = new THREE.OrthographicCamera(
+      -fH*aspect/2, fH*aspect/2, fH/2, -fH/2, 0.1, 50
+    );
+    // Slight upward camera shift → camera looks slightly down, showing more label
+    cam.position.set(-0.12, 0.35, 8);
+    cam.lookAt(0, 0.1, 0);
+    return cam;
+  }
+
+  // ── Lighting setup ────────────────────────────────────────────────────
+  function addLights(scene) {
+    scene.add(new THREE.AmbientLight(0xdde8f5, 0.8));
+
+    // Key: warm white from top-left-front
+    const key = new THREE.DirectionalLight(0xfff8f0, 1.4);
+    key.position.set(-1.6, 3.2, 3.2);
+    scene.add(key);
+
+    // Fill: cool from right
+    const fill = new THREE.DirectionalLight(0xd0e8ff, 0.6);
+    fill.position.set(2.8, 0.4, 2.0);
+    scene.add(fill);
+
+    // Rim: cold from behind-bottom
+    const rim = new THREE.DirectionalLight(0xc0d4ff, 0.7);
+    rim.position.set(0.4, -2.2, -2.8);
+    scene.add(rim);
+
+    // Top catch light (lid highlight)
+    const top = new THREE.DirectionalLight(0xffffff, 0.9);
+    top.position.set(-0.3, 4.5, 1.2);
+    scene.add(top);
+  }
+
+  // ── Initialize all .gl-can elements (after fonts load so canvas text renders) ──
+  const cans = [];
+
+  // Ensure Bebas Neue is loaded before drawing label textures; fall back after 3s
+  try {
+    await Promise.race([
+      document.fonts.load('700 48px "Bebas Neue"'),
+      new Promise(r => setTimeout(r, 3000)),
+    ]);
+  } catch(_) {}
+  await document.fonts.ready;
+
+  document.querySelectorAll('.gl-can').forEach(canvas => {
+    const flavorKey = canvas.dataset.flavor || 'default';
+    const sizeKey = canvas.dataset.size || 'md';
+    const { w, h } = SIZES[sizeKey] || SIZES.md;
+
+    canvas.width  = w * DPR;
+    canvas.height = h * DPR;
+    canvas.style.width  = w + 'px';
+    canvas.style.height = h + 'px';
+
+    const ctx2d   = canvas.getContext('2d');
+    const scene   = new THREE.Scene();
+    addLights(scene);
+
+    const canMesh = buildCan(flavorKey);
+    scene.add(canMesh);
+
+    const camera = makeCamera(w * DPR, h * DPR);
+
+    cans.push({
+      canvas, ctx2d, scene, camera, canMesh,
+      rw: w * DPR, rh: h * DPR,
+      phase: Math.random() * Math.PI * 2,
+      visible: true,
+    });
+  });
+
+  // Initial static render (so cans appear immediately, before scroll)
+  cans.forEach(({ scene, camera, ctx2d, canvas, rw, rh }) => {
+    renderer.setSize(rw, rh, false);
+    renderer.render(scene, camera);
+    ctx2d.drawImage(renderer.domElement, 0, 0);
+  });
+
+  // Re-render any can that enters the viewport (handles canvas content loss after scroll)
+  const visIo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const obj = cans.find(c => c.canvas === e.target);
+      if (!obj) return;
+      renderer.setSize(obj.rw, obj.rh, false);
+      renderer.render(obj.scene, obj.camera);
+      obj.ctx2d.drawImage(renderer.domElement, 0, 0);
+    });
+  }, { rootMargin: '400px' });
+  cans.forEach(c => visIo.observe(c.canvas));
+
+  // Animate
+  let last = 0;
+  (function loop(t) {
+    requestAnimationFrame(loop);
+    if (t - last < 28) return; // ~35fps cap
+    last = t;
+    const ts = t * 0.00072;
+    cans.forEach(c => {
+      c.canMesh.position.y = Math.sin(ts + c.phase) * 0.038;
+      c.canMesh.rotation.y = Math.sin(ts * 0.38 + c.phase) * 0.045;
+      renderer.setSize(c.rw, c.rh, false);
+      renderer.render(c.scene, c.camera);
+      c.ctx2d.drawImage(renderer.domElement, 0, 0);
+    });
+  })(0);
   </script>
 
 </body>
